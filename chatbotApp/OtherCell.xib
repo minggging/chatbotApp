@@ -16,43 +16,54 @@
                 <rect key="frame" x="0.0" y="0.0" width="407" height="52"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleAspectFit" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lnU-A6-O9U">
-                        <rect key="frame" x="0.0" y="0.0" width="407" height="50"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bot" translatesAutoresizingMaskIntoConstraints="NO" id="XIo-jg-ax4">
+                        <rect key="frame" x="10" y="10" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="4Zf-q1-dMT"/>
+                            <constraint firstAttribute="height" constant="40" id="e8o-xb-Egk"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="06b-Zm-c0n">
+                        <rect key="frame" x="60" y="10" width="61.333333333333343" height="40.333333333333336"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bot" translatesAutoresizingMaskIntoConstraints="NO" id="XIo-jg-ax4">
-                                <rect key="frame" x="0.0" y="0.0" width="40" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="4Zf-q1-dMT"/>
-                                    <constraint firstAttribute="height" constant="40" id="e8o-xb-Egk"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="봇이 보낸 메세지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8J-i4-ARz">
-                                <rect key="frame" x="50" y="0.0" width="357" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8b-Hs-Gci">
+                                <rect key="frame" x="10" y="9.9999999999999982" width="41.333333333333336" height="20.333333333333329"/>
+                                <edgeInsets key="layoutMargins" top="-20" left="-20" bottom="-20" right="-20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                    </stackView>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="e8b-Hs-Gci" secondAttribute="bottom" constant="10" id="78y-dD-XQM"/>
+                            <constraint firstItem="e8b-Hs-Gci" firstAttribute="leading" secondItem="06b-Zm-c0n" secondAttribute="leading" constant="10" id="8xp-sk-KPO"/>
+                            <constraint firstItem="e8b-Hs-Gci" firstAttribute="top" secondItem="06b-Zm-c0n" secondAttribute="top" constant="10" id="HyQ-IN-vHf"/>
+                            <constraint firstAttribute="trailing" secondItem="e8b-Hs-Gci" secondAttribute="trailing" constant="10" id="kPV-Dl-opg"/>
+                        </constraints>
+                    </view>
                 </subviews>
-                <color key="backgroundColor" systemColor="systemTealColor"/>
                 <constraints>
-                    <constraint firstItem="lnU-A6-O9U" firstAttribute="leading" secondItem="b0c-YE-Uje" secondAttribute="leading" id="6b3-hu-rl1"/>
-                    <constraint firstAttribute="trailing" secondItem="lnU-A6-O9U" secondAttribute="trailing" id="6wm-kY-B0o"/>
-                    <constraint firstItem="lnU-A6-O9U" firstAttribute="top" secondItem="b0c-YE-Uje" secondAttribute="top" id="9ix-Tr-HST"/>
-                    <constraint firstAttribute="bottom" secondItem="lnU-A6-O9U" secondAttribute="bottom" id="O5f-gE-av3"/>
+                    <constraint firstItem="XIo-jg-ax4" firstAttribute="top" secondItem="b0c-YE-Uje" secondAttribute="top" constant="10" id="0nB-qa-6xb"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="06b-Zm-c0n" secondAttribute="trailing" constant="10" id="7g9-B2-72F"/>
+                    <constraint firstAttribute="bottom" secondItem="06b-Zm-c0n" secondAttribute="bottom" constant="10" id="G8w-yV-UqV"/>
+                    <constraint firstItem="06b-Zm-c0n" firstAttribute="top" secondItem="b0c-YE-Uje" secondAttribute="top" constant="10" id="LfO-9L-Ija"/>
+                    <constraint firstItem="06b-Zm-c0n" firstAttribute="leading" secondItem="XIo-jg-ax4" secondAttribute="trailing" constant="10" id="Ytu-DD-2ce"/>
+                    <constraint firstAttribute="bottom" secondItem="XIo-jg-ax4" secondAttribute="bottom" constant="10" id="rJ5-pq-efg"/>
+                    <constraint firstItem="XIo-jg-ax4" firstAttribute="leading" secondItem="b0c-YE-Uje" secondAttribute="leading" constant="10" id="w4e-W0-tbd"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="botLabel" destination="N8J-i4-ARz" id="Pud-oS-NkS"/>
+                <outlet property="botLabel" destination="e8b-Hs-Gci" id="iWV-hR-L1l"/>
+                <outlet property="insetView" destination="06b-Zm-c0n" id="wiu-G6-Blp"/>
             </connections>
             <point key="canvasLocation" x="290.83969465648852" y="-107.74647887323944"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="bot" width="50" height="50"/>
-        <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
